@@ -600,9 +600,9 @@ async function subForm(){
     /* Using Formspree — replace FORM_ID below with your actual Formspree form ID */
     /* Sign up free at formspree.io, create a form, and paste the ID here */
     /* Until then, the form will show success and open the mailto fallback */
-    const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+    const FORMSPREE_ID = 'xgonykzd';
 
-    if(FORMSPREE_ID === 'YOUR_FORMSPREE_ID'){
+    if(FORMSPREE_ID === 'xgonykzd'){
       /* Fallback: open mailto with pre-filled data */
       const body = encodeURIComponent(
         'Name: ' + name + '\n' +
@@ -629,5 +629,16 @@ async function subForm(){
       document.getElementById('fContent').style.display='none';
       document.getElementById('fSucc').classList.add('show');
     } else {
-      throw new Error('Server error');
-   
+            throw new Error('Server error');
+    }
+  } catch(e) {
+    btn.disabled=false;
+    btn.textContent='Send My Enquiry →';
+    errEl.style.display='block';
+    errEl.textContent='Something went wrong. Please try WhatsApp or email directly.';
+  }
+}
+</script>
+
+</body>
+</html>
