@@ -525,14 +525,22 @@ window.addEventListener('scroll',()=>sb.classList.toggle('on',scrollY>500),{pass
 
 /* Scroll reveal — add hidden class first so fallback stays visible if JS fails */
 document.querySelectorAll('.rv,.rl').forEach(el=>el.classList.add('hidden'));
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('hidden');e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('hidden');e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0,rootMargin:'0px 0px 0px 0px'});
 document.querySelectorAll('.rv,.rl').forEach(el=>obs.observe(el));
+// Fallback: ensure all elements visible after 2s regardless
+setTimeout(()=>{document.querySelectorAll('.rv,.rl').forEach(el=>{el.classList.remove('hidden');el.classList.add('vis');});},2000);
 
 /* FAQ accordion */
 function tFaq(btn){
   const o=btn.classList.contains('open');
-  document.querySelectorAll('.fq').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open');});
-  if(!o){btn.classList.add('open');btn.nextElementSibling.classList.add('open');}
+  document.querySelectorAll('.fi').forEach(fi=>{
+    fi.querySelector('.fq').classList.remove('open');
+    fi.querySelector('.fa').classList.remove('open');
+  });
+  if(!o){
+    btn.classList.add('open');
+    btn.closest('.fi').querySelector('.fa').classList.add('open');
+  }
 }
 
 /* Smooth scroll for anchor links */
