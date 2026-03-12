@@ -161,8 +161,8 @@ body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--navy);o
 .fq:hover{background:rgba(212,146,10,.04);}.fq.open{color:var(--gold);}
 .fqico{width:22px;height:22px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:13px;font-size:.88rem;color:var(--navy);transition:var(--tr);}
 .fq.open .fqico{background:var(--gold);color:#fff;transform:rotate(45deg);}
-.fa{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-.fa.open{max-height:400px;}
+.fa{display:none;}
+.fa.open{display:block;}
 .fai{padding:0 22px 18px;font-size:.86rem;color:var(--tm);line-height:1.8;font-weight:300;}
 /* CTA */
 .cta-sec{background:var(--navy);padding:110px 0;position:relative;overflow:hidden;}
@@ -438,13 +438,13 @@ body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--navy);o
         <a href="https://wa.me/+60196686790" target="_blank" rel="noopener" class="btnp" style="display:inline-block;">Book Free Session &rarr;</a>
       </div>
       <div class="flist">
-        <div class="fi"><button class="fq" onclick="tFaq(this)">Is the training HRD Corp claimable?<span class="fqico">+</span></button><div class="fa"><div class="fai">Yes. Marketing Lancers is an HRD Corp Registered Training Provider. All training programmes are HRD Corp Claimable, which means your company can recover training costs through your existing HRDC levy. We walk you through the claims process step by step.</div></div></div>
-        <div class="fi"><button class="fq" onclick="tFaq(this)">Do you offer on-site or in-house training?<span class="fqico">+</span></button><div class="fa"><div class="fai">Absolutely. We deliver training at your premises, at an external venue, or in a hybrid format. Everything is customised to your business context, so your staff work through real scenarios from your industry &mdash; not generic case studies.</div></div></div>
-        <div class="fi"><button class="fq" onclick="tFaq(this)">How is this different from standard training?<span class="fqico">+</span></button><div class="fa"><div class="fai">Most training programmes deliver information and then leave. Our approach is built around behavioural change &mdash; what people actually do differently after the session. We combine academic rigour (MPhil, NLP, Lean Six Sigma) with real-world operational experience to make that change stick.</div></div></div>
-        <div class="fi"><button class="fq" onclick="tFaq(this)">We&rsquo;re a small business. Is this suitable?<span class="fqico">+</span></button><div class="fa"><div class="fai">Yes. Some of the most impactful work we&rsquo;ve done has been with small businesses where the owner is trying to step back from day-to-day operations. We scale our engagement to match your team size and budget, and we&rsquo;re always transparent about what&rsquo;s realistic for your stage of business.</div></div></div>
-        <div class="fi"><button class="fq" onclick="tFaq(this)">How long does a consultancy engagement take?<span class="fqico">+</span></button><div class="fa"><div class="fai">It depends on the scope. Process audits can be completed in a few weeks. Full operational turnarounds are longer-term engagements. We give you a clear timeline and milestones from the outset &mdash; no vague &ldquo;ongoing&rdquo; commitments without defined outcomes.</div></div></div>
-        <div class="fi"><button class="fq" onclick="tFaq(this)">What industries do you work with?<span class="fqico">+</span></button><div class="fa"><div class="fai">We have deep experience in healthcare and senior care, retail, service businesses, and general SME management. Our methodologies apply across industries &mdash; what changes is the language, examples, and specific process design for your sector.</div></div></div>
-        <div class="fi"><button class="fq" onclick="tFaq(this)">What does the free strategy session involve?<span class="fqico">+</span></button><div class="fa"><div class="fai">It&rsquo;s a genuine conversation &mdash; typically 30 to 45 minutes &mdash; where we learn about your business challenges and you learn whether our approach is the right fit. There&rsquo;s no hard sell. If we&rsquo;re not the right solution, we&rsquo;ll say so. Either way, you&rsquo;ll leave with useful clarity.</div></div></div>
+        <div class="fi"><button class="fq">Is the training HRD Corp claimable?<span class="fqico">+</span></button><div class="fa"><div class="fai">Yes. Marketing Lancers is an HRD Corp Registered Training Provider. All training programmes are HRD Corp Claimable, which means your company can recover training costs through your existing HRDC levy. We walk you through the claims process step by step.</div></div></div>
+        <div class="fi"><button class="fq">Do you offer on-site or in-house training?<span class="fqico">+</span></button><div class="fa"><div class="fai">Absolutely. We deliver training at your premises, at an external venue, or in a hybrid format. Everything is customised to your business context, so your staff work through real scenarios from your industry &mdash; not generic case studies.</div></div></div>
+        <div class="fi"><button class="fq">How is this different from standard training?<span class="fqico">+</span></button><div class="fa"><div class="fai">Most training programmes deliver information and then leave. Our approach is built around behavioural change &mdash; what people actually do differently after the session. We combine academic rigour (MPhil, NLP, Lean Six Sigma) with real-world operational experience to make that change stick.</div></div></div>
+        <div class="fi"><button class="fq">We&rsquo;re a small business. Is this suitable?<span class="fqico">+</span></button><div class="fa"><div class="fai">Yes. Some of the most impactful work we&rsquo;ve done has been with small businesses where the owner is trying to step back from day-to-day operations. We scale our engagement to match your team size and budget, and we&rsquo;re always transparent about what&rsquo;s realistic for your stage of business.</div></div></div>
+        <div class="fi"><button class="fq">How long does a consultancy engagement take?<span class="fqico">+</span></button><div class="fa"><div class="fai">It depends on the scope. Process audits can be completed in a few weeks. Full operational turnarounds are longer-term engagements. We give you a clear timeline and milestones from the outset &mdash; no vague &ldquo;ongoing&rdquo; commitments without defined outcomes.</div></div></div>
+        <div class="fi"><button class="fq">What industries do you work with?<span class="fqico">+</span></button><div class="fa"><div class="fai">We have deep experience in healthcare and senior care, retail, service businesses, and general SME management. Our methodologies apply across industries &mdash; what changes is the language, examples, and specific process design for your sector.</div></div></div>
+        <div class="fi"><button class="fq">What does the free strategy session involve?<span class="fqico">+</span></button><div class="fa"><div class="fai">It&rsquo;s a genuine conversation &mdash; typically 30 to 45 minutes &mdash; where we learn about your business challenges and you learn whether our approach is the right fit. There&rsquo;s no hard sell. If we&rsquo;re not the right solution, we&rsquo;ll say so. Either way, you&rsquo;ll leave with useful clarity.</div></div></div>
       </div>
     </div>
   </div>
@@ -531,17 +531,20 @@ document.querySelectorAll('.rv,.rl').forEach(el=>obs.observe(el));
 setTimeout(()=>{document.querySelectorAll('.rv,.rl').forEach(el=>{el.classList.remove('hidden');el.classList.add('vis');});},2000);
 
 /* FAQ accordion */
-function tFaq(btn){
-  const o=btn.classList.contains('open');
-  document.querySelectorAll('.fi').forEach(fi=>{
-    fi.querySelector('.fq').classList.remove('open');
-    fi.querySelector('.fa').classList.remove('open');
+/* FAQ accordion */
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.fq').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var isOpen = this.classList.contains('open');
+      document.querySelectorAll('.fq').forEach(function(b){ b.classList.remove('open'); });
+      document.querySelectorAll('.fa').forEach(function(a){ a.classList.remove('open'); });
+      if(!isOpen){
+        this.classList.add('open');
+        this.parentElement.querySelector('.fa').classList.add('open');
+      }
+    });
   });
-  if(!o){
-    btn.classList.add('open');
-    btn.closest('.fi').querySelector('.fa').classList.add('open');
-  }
-}
+});
 
 /* Smooth scroll for anchor links */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
